@@ -3,6 +3,9 @@ title: 'Notes de mises à jour'
 slug: notes-mises-a-jour
 ---
 
+## 11/03/2025: Amélioration - Lancement automatique de processus
+* Lancement automatique des processus de préconstruction Docker et de mise en cache lorsqu'obligatoires.
+
 ## 2/02/2025: Correctif
 * Fix d'un problème de droit affectant l'image préconfigurée Prestashop.
 
