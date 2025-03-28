@@ -48,7 +48,7 @@ Cette étape dure en moyenne 90 secondes.
 
 ![process_create_server](process_create_server.png?style=max-width:35rem;)
 
-Si après 5 minutes le serveur n'est toujours pas prêt, [contactez le support](ressources-support/contact-support).
+Si après 5 minutes le serveur n'est toujours pas prêt, [contactez le support](/ressources-support/contact-support).
 
 ## Processus en erreur
 

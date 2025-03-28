@@ -3,7 +3,7 @@ title: Facturation
 taxonomy:
     category:
         - docs
-media_order: 'billing_bills_FR.png,billing_current_consumption_FR.png,billing_infos_FR.png,billing_payment_methods_FR.png,billing_subscription_FR.png'
+media_order: 'billing_infos_FR.png,billing_subscription_FR.png,billing_current_consumption_FR.png,billing_bills_FR.png,billing_payment_methods_FR.png'
 ---
 
 Les administrateurs de l'espace peuvent voir un bouton "Facturation" dans le menu latéral gauche. Ce lien ouvre une page dans laquelle vous pouvez consulter et modifier tous les détails de votre facturation.  
