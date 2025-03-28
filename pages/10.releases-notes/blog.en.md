@@ -2,142 +2,101 @@
 title: 'Releases notes'
 ---
 
-## 11/03/2025: Amélioration - Lancement automatique de processus
-* Lancement automatique des processus de préconstruction Docker et de mise en cache lorsqu'obligatoires.
+## 03/21/2025: Environment Updates
+* Updated Docker, Docker Compose, DinD, PHP, vendors, Git, Visual Studio Code, Codeserver.
+* Added Docker Compose plugin, now allowing the use of `docker compose <command>`.
 
-## 2/02/2025: Correctif
-* Fix d'un problème de droit affectant l'image préconfigurée Prestashop.
+## 03/19/2025: Improvements and Fixes
+* `VIRTUAL_HOST` is no longer required to expose a container; port allocation via "XXXX:XXXX" now also works.
+* Improved restart process: allocated resources and sleep delays are now updated.
+* Fixed an issue preventing an environment from restarting when the agent's user account had been deleted.
 
-## 15/01/2025: Fonctionnalité - Synchronisation des préférences utilisateurs
-* Création d'un plugin VSCode permettant de synchroniser les thèmes, raccourcis, et préférences de l'instance locale avec Protocode. Il permet aussi de synchroniser les alias du terminal (bash, zsh) pour les utilisateur Mac et Unix.
+## 03/15/2025: Feature - Devcontainer
+* Added the ability to configure a repository using an existing `devcontainer.json` file.
 
-## 6/12/2024: Fonctionnalité & correctif - Autoconfiguration par IA
-* Intégration d'un nouveau module configurant automatiquement les dépôts grace à un IA.
-* Fix d'une erreur de docker-compose au lancement d'un environnement lorsque le réseau docker n'est pas encore lancé.
+## 03/11/2025: Improvement - Automatic Process Execution
+* Automatic execution of mandatory Docker prebuild and caching processes.
 
-## 13/12/2024: Amélioration - Nouvelle image préconfigurée
-* Ajout de php 5.6 dans les images préconfigurées pour le support de projet "Legacy".
+## 02/02/2025: Fix
+* Fixed a permissions issue affecting the preconfigured Prestashop image.
 
-## 05/07/2024: Style - Refonte des interfaces de l'application
-* Interface complètement repensée pour fluidifier la navigation entre les Workspaces et les tâches, et qui simplifie les écrans de configuration de dépôt.
+## 01/15/2025: Feature - User Preference Synchronization
+* Created a VSCode plugin that syncs themes, shortcuts, and preferences between the local instance and Protocode. It also syncs terminal aliases (bash, zsh) for Mac and Unix users.
 
-## 06/12/2024: Amélioration - Nouvelles images préconfigurées
-* Ajout des images MongoDB, PostgresSQL, Mongo Express, Python, Go, Java en tant qu'images préconfigurées dans la configuration d'un dépôt.
+## 12/06/2024: Feature & Fix - AI-Based Auto-Configuration
+* Integrated a new module that automatically configures repositories using AI.
+* Fixed a `docker-compose` error when launching an environment while the Docker network was not yet started.
 
-## 31/10/2024: Amélioration - Nouvelles stack dans le module de démo
-* Ajout des stack Angular, Symfony, Laravel et Drupal au lancement du module de démonstration.
+## 12/13/2024: Improvement - New Preconfigured Image
+* Added PHP 5.6 to the preconfigured images to support legacy projects.
 
-## 30/10/2024: Amélioration - Page non trouvée sur les environnements
-* Une nouvelle "page non trouvée" a été créée pour les environnements, afin que l'utisateur comprenne plus facilement l'origine de l'erreur et donne les solutions les plus courantes.
+## 07/05/2024: UI Redesign
+* Completely revamped interface for smoother navigation between Workspaces and tasks, and simplified repository configuration screens.
 
-## 17/10/2023: Fonctionnalité - Magic links
-* Nouvelle fonctionnalité permettant d'avoir une url qui réouvre l'environnement s'il était en pause.
+## 12/06/2024: Improvement - New Preconfigured Images
+* Added MongoDB, PostgreSQL, Mongo Express, Python, Go, and Java to the preconfigured repository setup options.
 
-## 13/09/2023: Fonctionnalité - Module de démo
-* Ajout d'un module de démonstration permettant de tester la solution en conditions réelles depuis la page d'accueil du site.
+## 10/31/2024: Improvement - New Stacks in Demo Module
+* Added Angular, Symfony, Laravel, and Drupal stacks to the demo module.
 
-## 22/08/2023: Correctif
-* Fix d'un bug affectant le calcul du nombre d'environnements ouverts dans un espace en cas d'erreur à l'ouverture d'un environnement.
+## 10/30/2024: Improvement - "Page Not Found" on Environments
+* A new "Page Not Found" screen has been created for environments, helping users identify errors and common solutions more easily.
 
-## 30/06/2023: Amélioration - Internationalisation
-* Refonte de la page d'accueil.
-* Internationalisation complète de l'applicatif pour les langues anglaise et française.
+## 10/17/2023: Feature - Magic Links
+* Introduced a new feature allowing users to access a paused environment via a dedicated URL.
 
-## 13/06/2023: Amélioration - Remise en marche des environnements
-* Les erreurs pouvant survenir pendant la remise en marche d'un environnement en pause ne sont plus bloquantes pour sa réouverture.
+## 09/13/2023: Feature - Demo Module
+* Added a demo module enabling users to test the platform in real-world conditions from the homepage.
 
-## 08/06/2023: Correctifs
-* Correction d'un problème affectant les utilisateurs de l'interface web de VSCode, dont les environnements se trouvaient mis en pause de manière intempestive. 
-* Correction d'un problème affectant les envirronements mis en pause après l'ajout d'un nouveau dépot dans la configuration du projet.
+## 08/22/2023: Fix
+* Fixed an issue with the calculation of open environments in a workspace when an error occurred while opening an environment.
 
-## 05/06/2023: Amélioration - Mise en pause / remise en marche
-* Modification de l'architecture utilisée pour la mise en pause, permettant de diviser par 5 le temps sur la mise en pause, et par 4 pour la remise en marche.
+## 06/30/2023: Improvement - Internationalization
+* Redesigned homepage.
+* Fully translated application, now available in English and French.
 
-## 22/05/2023: Améliorations - Modifications des volumes des images préconfigurées
-* L'interface de paramétrage de la virtualisation permet désormais de modifier/ajouter/supprimer des volumes au sein du mode "Utiliser les images préconfigurées de Protocode".
+## 06/13/2023: Improvement - Environment Restart
+* Errors occurring during the restart of paused environments are no longer blocking.
 
-## 05/05/2023: Améliorations - Utilisateur rootless et images préconfigurées
-* L'utilisateur rootless. (protocode) a désormais l'id 1000, afin de simplifier la gestion des droits avec de nombreuses images docker partageant cet id.
-* Toutes les images préconfigurées ont désormais l'id 1000 pour l'utilisateur du processus principal (www-data pour php par exemple).
-* Les images de Prestashop et de Wordpress ont été améliorées pour s'intégrer nativement dans l'écosystème Protocode (versions "plug-n-play").
-* Les images node 20, php 8.2, adminer et maildev ont été ajoutées dans les images préconfigurées.
-* Fix d'un bug empêchant la préconstruction d'image dans les dépôts ou la version de docker-compose utilisée était la V1.
+## 06/08/2023: Fixes
+* Fixed an issue affecting VSCode web interface users, where environments were being paused unexpectedly.
+* Fixed an issue causing environments to pause after adding a new repository to the project configuration.
 
-## 21/04/2023: Correctifs - Lien de prévisualisation sur les environnements mis en pause
-* Correction liée à l'ajout de la dissociation des environnements vis-à-vis des configurations de dépots. Les liens de prévisualisation n'étaient plus affichés sur l'interface web pour les environnements remis en marche.
+## 06/05/2023: Improvement - Pause/Resume Process
+* Changed the architecture used for pausing, reducing pause time by a factor of 5 and resume time by a factor of 4.
 
-## 20/04/2023: Amélioration - Remise en marche des environnements
-* La remise en marche des environnements est désormais dissociée des configurations de dépots. Cela évite que les modifications de configuration crée des erreurs bloquant la remise en marche des environnements mis en pause.
+## 05/22/2023: Improvements - Preconfigured Image Volumes
+* The virtualization configuration interface now allows users to modify/add/remove volumes in "Use Protocode Preconfigured Images" mode.
 
-## 04/04/2023: Correctif
-* Correction d'un bug lié à l'ajout des environnements rootless. Les extensions vcode n'étaient plus installées avec la commande `code --install-extension`.
+## 05/05/2023: Improvements - Rootless User & Preconfigured Images
+* The rootless user `protocode` now has ID 1000 to simplify permission management with many Docker images using the same ID.
+* All preconfigured images now use ID 1000 for their main process user (`www-data` for PHP, for example).
+* The Prestashop and WordPress images have been enhanced for seamless integration with the Protocode ecosystem ("plug-n-play" versions).
+* Added Node 20, PHP 8.2, Adminer, and MailDev to the preconfigured images.
+* Fixed a bug preventing image prebuilding in repositories using `docker-compose` V1.
 
-## 01/04/2023: Modification du plan tarifaire
-* Retrait des plans pay as you go individuals et pay as you go entreprise, et du plan developer.
-* Modification du plan Starter, devenant gratuit, offrant 50 crédits mensuels, et sans dépassement possible.
-* Ajout du pack Pro, à 9€ par mois, offrant 100 crédits mensuels, et dépassement payé au nombre de crédits consommés (0.18€/crédit). 
+## 04/21/2023: Fix - Preview Links on Paused Environments
+* Fixed an issue related to the dissociation of environments from repository configurations, which caused preview links to no longer appear in the web interface when resuming an environment.
 
-## 23/03/2023: Fonctionnalité - Ajout d'un nouveau hook de cycle de vie
-* Ajout d'un nouveau hook permettant d'ajouter du traitement avant la mise en veille d'un environnement.
+## 04/20/2023: Improvement - Environment Restart
+* Environment restarts are now independent of repository configurations, preventing configuration changes from blocking the restart of paused environments.
 
-## 15/03/2023: Fonctionnalité- Intégration du feedback portal de Userback
-* Deux interfaces sont désormais disponibles. L'une pour émettre des idées d'évolution, et l'autre pour voir la roadmap publique.
+## 04/04/2023: Fix
+* Fixed an issue related to the introduction of rootless environments where VSCode extensions were not installed via `code --install-extension`.
 
-## 06/03/2023: Fonctionnalité - Environnement sans utilisateur root
-* Au niveau de la configuration des projets, il est désormais possible de choisir l'utilisateur par défaut au sein des environnements. Soit l'utilisateur super-privilégié "root", soit un utilisateur non privilégié "protocode" (qui dispose cependant du pouvoir d'utiliser "sudo" sans mot de passe pour toute commande nécessitant des accès root).
+## 04/01/2023: Pricing Plan Changes
+* Removed the Pay As You Go Individuals, Pay As You Go Enterprise, and Developer plans.
+* Changed the Starter plan to a free plan, offering 50 monthly credits with no overage.
+* Introduced the Pro plan at €9/month, providing 100 monthly credits, with overages billed at €0.18/credit.
 
-## 16/02/2023: Correctifs & Améliorations
-* Fix de l'erreur "Git Unsafe Repository"
-* Amélioration du processus de build. Identification exacte des images à construire, et construction de ces images seules. Plus de pull des autres images du fichiers docker-compose. Le processus de pré-construction n'est plus obligatoire si toutes les images sont déjà préconstruites.
+## 03/23/2023: Feature - New Lifecycle Hook
+* Added a new hook allowing custom processing before an environment goes to sleep.
 
-## 14/02/2023: Amélioration
-* L'ouverture dans VSCode local se fait désormais dans une nouvelle fenêtre
+## 02/16/2023: Fixes & Improvements
+* Fixed the "Git Unsafe Repository" error.
+* Improved the build process: precisely identifies which images need to be built and only builds those, without pulling other images from the `docker-compose` file. Prebuilding is no longer mandatory if all images are already built.
 
-## 13/02/2023: Correctifs
-* Fix de l'erreur request timeout lors de la récupération de logs lorsque très volumineux
-* Fix variable ENVIRONMENT_URL non définies dans une connexion ssh
-
-## 10/02/2023: Correctifs & changements mineurs
-* Fix de l'erreur retournée à la mise en pause des environnement lors de la compression de fichiers larges modifiés en cours de processus.
-* Version par défaut de docker-compose passe de la v1 à v2
-* Ajout des liens vers le changelog et le statut des service
-
-## 09/02/2023: Fonctionnalités - IDEs JetBrains
-* Ajout de la possibilité de se connecter aux IDEs de Jetbrains: CLion, GoLand, IntelliJ, PhpStorm, PyCharm, Rider, RubyMine, WebStorm.
-* Refonte des menus et boite de dialogue propres aux opérations sur les environnements, le code, la prévisualisation et la gestion de projet.
-
-## 03/02/2023: Correctifs - Stabilité des services
-* Amélioration de la gestion automatisée de la flotte serveur.
-* Ajout de la fonctionnalité de mise en quarantaine des serveurs défectueux.
-* Amélioration des scripts de vérification de l'état des serveurs.
-* Amélioration du processus de kill des processus lancés.
-* Fix de l'affichage des caractères unicode non interprétés dans la modale de visualisation des processus.
-
-## 31/01/2023: Nouvelle offre tarifaire
-* Ajout des nouvelles offres tarifaires dans la souscription.
-* Refactoring de la page facturation.
-
-## 30/01/2023: Améliorations - Optimisation des services
-* Diminution du temps de démarrage des environnements (3.5s vs. 20s).
-* Ajout de la mise en cache des fichiers non versionnés lors du lancement d'un cycle complet. Permet la division par 4 des temps d'ouverture de nouveaux environnements.
-* Modification des outils de compression pour la mise en veille et la remise en marche des environnement, permettant de diviser par 5 la taille des archives.
-* Ajout de la possibilité d'installer les extensions vscode dans les scripts d'initialisation.
-
-## 12/12/2022: Style - Refonte du site web:
-* Nouvelle arborescence de pages.
-* Utilisation des polices et des couleurs officielle de la charte graphique.
-
-## 21/10/2022: Amélioration - Synchronisation VSCode web et local
-* Ajout de la synchronisation des extensions et des préférences entre VSCode web et VSCode local
-
-## 13/10/2022: Correctif
-* Fix du problème de communication entre les conteneurs docker de dépôts git différents (projets multi-dépôts).
-
-## 05/10/2022: Fonctionnalité - Redémarrage des environnements
-* Ajout de l'option "Redémarrer" un environnement ouvert.
-
-## 30/09/2022: Fonctionnalité - Mise en pause des environnements
-* Ajout de l'option "Mettre en pause" un environnement ouvert.
-* Ajout de l'option "Remettre en marche" un environnement ouvert.
-* Ajout du champ "Temps d'inactivité avant mise en sommeil" dans la page détails d'un projet.
-
+## 02/10/2023: Fixes & Minor Changes
+* Fixed an error occurring when pausing environments with large modified files being compressed.
+* Default `docker-compose` version changed from v1 to v2.
+* Added links to the changelog and service status.

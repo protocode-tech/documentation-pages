@@ -2,4 +2,4 @@
 title: 'FAQ and Troubleshooting'
 ---
 
-# Troubleshooting
+# Frequently asked questions & Troubleshooting
