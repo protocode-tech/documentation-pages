@@ -9,9 +9,10 @@ media_order: docker_vars_FR.png
 ---
 
 Lorsqu'un dépôt a été ajouté, reste ensuite à gérer la "virtualisation". Autrement dit, gérer les dépendances nécessaires pour son exécution. Par exemple, la nécessité d'avoir Php installé, voire MySQL ou encore NodeJS.
-Lorsqu'un dépôt a été ajouté, reste ensuite à gérer la "virtualisation". Autrement dit, gérer les dépendances nécessaires pour son exécution. Par exemple, la nécessité d'avoir PHP installé, voire MySQL ou encore NodeJS.
 
 Pour ce faire, Protocode se repose sur [Docker](https://www.docker.com/) et sur [Docker Compose](https://docs.docker.com/compose/), le gestionnaire de conteneurs multiples. Ce qui vous permet de faire tourner Protocode même sur des projets complexes, contenant notamment des micro-services.
+
+[plugin:youtube](https://www.youtube.com/watch?v=BMEw2yD-0Mk)
 
 ## Choix d'une stratégie de virtualisation
 

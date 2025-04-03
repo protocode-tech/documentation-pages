@@ -11,6 +11,8 @@ In Protocode, once a repository has been added, the next step is to manage the "
 
 To achieve this, Protocode relies on [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/), the multi-container manager. This allows Protocode to run even in complex projects, particularly those with microservices.
 
+[plugin:youtube](https://www.youtube.com/watch?v=BMEw2yD-0Mk)
+
 ## Choosing a Virtualization Strategy
 
 You will need to establish a Docker Compose configuration for each repository. To help with this, Protocode’s configuration tool gives you the option to choose from 4 strategies:

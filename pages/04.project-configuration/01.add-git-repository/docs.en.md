@@ -9,6 +9,8 @@ In Protocode, we distinguish between projects and GIT repositories, although the
 
 When a project is created, the second step is to add the repositories. For monolithic projects, there will only be one. But in complex projects, there may be several. For example, one repository for an API, and another for a JavaScript site that consumes the API.
 
+[plugin:youtube](https://www.youtube.com/watch?v=TUF88b-nwTM)
+
 Adding a repository is done in 3 steps:
 
 * **Identification**: fill in the URL of the repository. The URL can be from a repository hosted on GitHub, but also GitLab (public or private), or BitBucket.
